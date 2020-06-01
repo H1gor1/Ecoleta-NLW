@@ -1,0 +1,184 @@
+/* :root -> referincia a raiz do documento */
+:root{
+    /* aqui podemos declarar variáveis */
+    --title-color: #322153;
+    --primary-color: #34cb79;
+}
+*/*referencia a todos os seletores*/ {
+    margin: 0;
+    padding:0;
+}
+html{
+    font-family: Roboto, sans-serif; 
+    /* atributo: valor */
+}
+
+body{
+    background: #f0f0f5;
+    -webkit-font-smoothing:antialiased;/*melhora a visualização da fonte*/
+}
+
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+    color: var(--title-color);
+    font-family: Ubuntu, sans-serif;
+}
+
+
+/* BOX MODEL */
+/* Modelo de Caixa */
+/*
+    Toda caixa tem:
+    largura, altura, espaçamentos, preenchimentos, 
+    bordas, cor, fundo, alinhamentos, posicionamento,
+    maneira que é vista pelo HTML (display) 
+*/
+/* alteração por fora do elementyo */
+/* 
+    Pode ser dividiro em 2 modelos de exibição(display) 
+    block -> Ocupa a linha inteira
+    inline -> vai ocupar somente o tamanho do elemento
+*/
+/* Alteração por dentro do elemento */
+/* 
+    Tem diversas opções, podemos testar na ferramenta do desenvolvedor, 
+    ao digitar display: aparece várias opções
+*//*textos*/
+/*
+- [ ]  tamanho
+- [ ]  tipo
+- [ ]  espaçamentos
+- [ ]  alinhamentos
+*/
+/* Boa prática - colocar os itens na ordem do HTML */
+
+#page-home{
+    height: 100vh; /*viewport height -> dinâmico ->*/
+    background: url('../assets/home-background.svg') no-repeat; 
+    background-position: 35vw 100px; /**x=35vw - y=botton*/
+    /* background-size: 70; */
+}
+
+#page-home .content{
+    width: 90%;
+    max-width: 1100px;/* Largura máxima */
+    /*margin-left: auto; se colocar margin auto dos dois lados, o elemento centraliza na página 
+    margin-right: auto; pode ser agrupado conforma abaixo
+    quando tem duas propriedades, a primeira corresponde a top e botton, a segunda a left e right
+    3 valores - 1º top 2º left righy 3º botton
+    4 propriedades (sentido horário) 1ºtop 2ºright 3ºbotton 4ºleft
+    */
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /*deixa o posicionamento na vertical, ou seja, muda de linha para coluna*/
+}
+
+#page-home header {
+    /* por fora continua block(pegando a linha toda)*/ 
+    margin-top: 48px; 
+    display: flex;
+    align-items: center;/* alinha os elementos, neste caso, no centro de forma vertical */
+    justify-content: space-between /* justify-content -> Justivica | space-between  -> coloca um espaço entre eles*/
+}
+
+#page-home header a{
+    display: flex;/* Esta parte é importante, por deixar o que está na tag anterior como flex, podendo deixar 
+    a configuração na tag stan devido ao estilo castata*/
+    color: var(--title-color);/*uso da variável do root*/
+    font-weight: 700;
+}
+
+#page-home header a span{
+    margin-right: 16px;
+    background-image: url('../assets/log-in.svg');
+    width: 20px;
+    height: 20px;
+    display: flex;
+}
+
+#page-home main{
+    max-width: 550px;
+    flex: 1;/* pega o tamanho total e divide no meio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#page-home main h1{
+    font-size: 54px;
+}
+
+#page-home main p{
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+#page-home main a{
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; 
+    margin-top: 40px;
+    background-color: var(--primary-color);
+    transition: 400ms;
+}
+
+#page-home main a:hover{
+    background-color: #2fb86e;
+}
+
+#page-home main a span{
+    width: 72px;
+    height:72px;
+    background-color: rgba(0, 0, 0, 0.08);
+    border-top-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-home main a span::after{ /*adciona um pseudo elemento*/
+    content: "";
+    background-image: url('../assets/search.svg');
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main a strong{
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 1024px){
+    #page-home{
+        height:100vh;
+        background-position: 30vw 80px;
+     }
+
+}
+
+@media (max-width: 900px){
+    #page-home{
+        height:80vh;
+        background-position: 70vw;
+    }
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+    #page-home header a{
+        position: absolute;/*coloca uma camada acima*/
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%)/* move o elemento no eixo X*/
+    }
+    #page-home main{
+        align-items: center;
+    }
+}
