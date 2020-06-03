@@ -90,3 +90,7 @@
 #modal form button:hover {
     background-color: #2fb85e;
 }
+
+#modal label {
+    color: #0e0A14ef;
+}
