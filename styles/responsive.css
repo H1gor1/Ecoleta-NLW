@@ -15,6 +15,11 @@
     #page-home main{
         align-items: center;
     }
+
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (min-width: 1700px){
@@ -26,5 +31,20 @@
 @media (max-height: 760px){
     #page-home{
         background-position-y: 200px;
+    }
+
+}
+
+@media (max-width: 680px) {
+    #page-create-point form .field,
+    #page-create-point form .field-group {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .items-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
     }
 }
