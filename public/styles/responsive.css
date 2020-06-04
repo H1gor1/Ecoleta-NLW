@@ -20,6 +20,18 @@
         grid-template-columns: 1fr;
     }
 
+    #page-search-results .cards img {
+        height: 250px;
+    }
+
+    #page-create-point .field-group {
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field {
+        margin-left: 0;
+    }
+
 }
 
 @media (min-width: 1700px){
@@ -46,5 +58,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
+    }
+
+    #page-create-point form {
+        align-items: center;
     }
 }
