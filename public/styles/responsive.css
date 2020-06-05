@@ -6,17 +6,19 @@
         align-items: center;
         text-align: center;
     }
-    #page-home header a{
+    #page-home header a {
         position: absolute;/*coloca uma camada acima*/
-        bottom: 48px;
+        bottom: -118px;
         left: 50%;
-        transform: translateX(-50%)/* move o elemento no eixo X*/
+        transform: translateX(-50%);/* move o elemento no eixo X*/
+        margin-bottom: 30px;
     }
     #page-home main{
         align-items: center;
     }
 
-    #page-search-results .cards {
+    #page-search-results .cards,
+    #page-create-point .items-grid {
         grid-template-columns: 1fr;
     }
 
@@ -30,6 +32,22 @@
 
     #page-create-point .field-group .field + .field {
         margin-left: 0;
+    }
+
+    #page-create-point form {
+        padding-left: 32px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    #page-create-point .items-grid {
+        margin-left: 38px;
+    }
+
+    #page-create-point respon {
+        width: 100%;
+        justify-content: center;
     }
 
 }
@@ -47,16 +65,19 @@
 
 }
 
-@media (max-width: 680px) {
-    #page-create-point form .field,
-    #page-create-point form .field-group {
-        display: grid;
-        grid-template-columns: 1fr;
+/*@media (max-width: 680px) {
+    #page-create-point .field-group {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    #page-create-point .field-group .field + .field {
+        margin-left: 0;
     }
 
-    .items-grid {
+    #page-create-point .items-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 16px;
     }
 
@@ -64,3 +85,5 @@
         align-items: center;
     }
 }
+*/
+
