@@ -12,5 +12,6 @@
 
 ### Contato
 [TWITTER](https://twitter.com/H1gor1)<br/>
-[LINKEDIN](www.linkedin.com/in/higor-lino)<br/>
 [EMAIL](mailto:higorgabrieldev@gmail.com)<br/>
+[LINKEDIN](www.linkedin.com/in/higor-lino)
+
