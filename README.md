@@ -2,7 +2,7 @@
 <h3 align="center">
     <img alt="Logo" title="#logo" width="300px" src="READMEPICTURES/logo.png">
     <br><br>
-    <b>Projeto feito durante a Nex Level Week da [Rocketseat](https://rocketseat.com.br/)</b>  
+    <b>Projeto feito durante a Nex Level Week da <a href="https://rocketseat.com.br/">Rocketseat</a></b>  
     <br>
 </h3>
 
