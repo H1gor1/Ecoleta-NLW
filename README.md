@@ -11,7 +11,9 @@
 ![](READMEPICTURES/gif.gif)
 
 ### Contato
-[TWITTER] (https://twitter.com/H1gor1)<br/>
-[EMAIL] (mailto:higorgabrieldev@gmail.com)<br/>
-[LINKEDIN] (https://bit.ly/3dDeMap)
+[TWITTER](https://twitter.com/H1gor1)<br/>
+
+[EMAIL](mailto:higorgabrieldev@gmail.com)<br/>
+
+[LINKEDIN](https://bit.ly/3dDeMap)
 
